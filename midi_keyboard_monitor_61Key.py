@@ -8,12 +8,17 @@ from PIL import Image
 
 class MidiKeyboard:
     def __init__(self):
+        MIDI_KEYBOARD_ICON = "midi.ico"
+        MIDI_KEYBOARD_NAME = "MIDI Keyboard"
+        MIDI_KEYBOARD_DEVICE_NAME = "USB Midi 0"
+        MIDI_KEYBOARD_DEVIDE_ID = 0
+
         self.root = tk.Tk()
         self.root.title("MIDI Keyboard")
-        self.root.iconbitmap('midi.ico')
+        self.root.iconbitmap(MIDI_KEYBOARD_ICON)
         self.root.protocol("WM_DELETE_WINDOW", self.minimize_to_tray)  # Handle window close event
-        self.icon = pystray.Icon("MIDI Keyboard", Image.open("midi.ico"), "MIDI Keyboard", self.create_menu())
-        self.device_name = "USB Midi  0"  # Automatically connect to "USB Midi 0"
+        self.icon = pystray.Icon("MIDI Keyboard", Image.open(MIDI_KEYBOARD_ICON), MIDI_KEYBOARD_NAME, self.create_menu())
+        self.device_name = MIDI_KEYBOARD_DEVICE_NAME  # Automatically connect to "USB Midi 0"
         try:
             self.inport = mido.open_input(self.device_name)
             self.keys = [self.create_key(i) for i in range(36, 97)]  # Adjusted range to cover all keys on your keyboard
@@ -36,11 +41,11 @@ class MidiKeyboard:
         self.keys[i-36].config(bg='red')  # Turn red
         # Call a different function based on the key that was pressed
         if i == 60:  # C2
-            self.action_for_key_36()
+            self.action_for_key_36()  #These functions are wrong and will be changed to correct number
         elif i == 62:  # C#2
-            self.action_for_key_37()
+            self.action_for_key_37()  #These functions are wrong and will be changed to correct number
         elif i == 38:  # D2
-            self.action_for_key_38()
+            self.action_for_key_38()  #These functions are wrong and will be changed to correct number
         # Add more elif statements here for more keys
 
     def handle_key_release(self, i):
@@ -48,15 +53,16 @@ class MidiKeyboard:
         self.keys[i-36].config(bg='SystemButtonFace')  # Return to original color
 
     def action_for_key_36(self):
-        webbrowser.open_new("hutton.in")
+        webbrowser.open_new("https://www.bing.com")
 
     def action_for_key_37(self):
-        webbrowser.open("google.com")
+        webbrowser.open("https://www.google.com")
 
     def action_for_key_38(self):
-        print("Action for key 38")
+        print(f"You pressed key 38")
 
     # Add more action methods here for more keys
+    # Might put actutions in the else if if it's easier.
 
     def run(self):
         threading.Thread(target=self.read_midi).start()
