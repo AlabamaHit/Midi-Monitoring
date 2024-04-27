@@ -45,7 +45,7 @@ class MidiKeyboard:
             # Trigger action associated with MIDI key press
             print(f"Key {i} was pressed")
             if i == 36:  # MIDI note number 36
-                webbrowser.open_new_tab("https://chat.openai.com/")
+                webbrowser.open_new_tab("https://www.bing.com/")
 
             elif i == 38:  # MIDI note number 38
                 webbrowser.open_new_tab("https://www.youtube.com")
