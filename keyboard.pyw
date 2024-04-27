@@ -6,6 +6,7 @@ import webbrowser
 import time
 import subprocess
 import ctypes
+import os
 
 class MidiKeyboard:
     def __init__(self):
@@ -44,17 +45,37 @@ class MidiKeyboard:
             # Trigger action associated with MIDI key press
             print(f"Key {i} was pressed")
             if i == 36:  # MIDI note number 36
-                webbrowser.open_new_tab("https://www.youtube.com")
+                webbrowser.open_new_tab("https://chat.openai.com/")
+
             elif i == 38:  # MIDI note number 38
-                webbrowser.open_new_tab("https://www.facebook.com/messages")
+                webbrowser.open_new_tab("https://www.youtube.com")
+
             elif i == 40:  # MIDI note number 40
                 webbrowser.open_new_tab("https://www.instagram.com")
+
             elif i == 42:  # MIDI note number 42
+                webbrowser.open_new_tab("https://www.messenger.com")
+
+            elif i == 44:  # MIDI note number 44
                 try:
                     # Replace "reaper.exe" with the actual executable name if necessary
                     subprocess.Popen(["C:\\Program Files\\REAPER (x64)\\reaper.exe"])
                 except FileNotFoundError:
                     messagebox.showerror("Error", "Reaper executable not found.")
+
+            elif i == 46:  # MIDI note number 46
+                def openhu():
+                    return webbrowser.open_new_tab("http:www.google.com")                    
+                openhu()  # Calls the nested THIS function you made. It's an example how to embed function.
+                    
+            elif i == 47:  # MIDI note number 47
+                user_home = os.path.expanduser("~")
+                if user_home:
+                    videos_folder = os.path.join(user_home, "Videos")
+                    subprocess.Popen(f'explorer "{videos_folder}"')
+                else:
+                    print("Failed to determine user's home directory.")
+
 
             elif i == 94:  # MIDI note number 94
                 self.show_app()  # Bring up the GUI when note 94 is played
