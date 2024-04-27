@@ -36,10 +36,9 @@ you can see how to get it to call and set it to any key you want.
 I have tested it with my Yahama YPT-300. I used a MIDI to USB cable, to connect. The setting on my keyboard is "PC 2" in the functions on the keyboard. I am running Windows 10.
 
 # I HOPE THIS HELPS SOMEONE OUT. I LOOKED FOR SO LONG FOR A SAFE WAY TO MAKE MY MIDI DO THIS
-# I USED TO USE HID MACROS; BUT I WANTED SOMETHING SMALLER BECAUSE FOR JUST USING MIDI TO RUN
-# I DIDN'T REALLY NEED SO MUCH. SO I SET OUT TO WRITE THIS.
-# I'M SURE THIS WILL WORK ON ANY MIDI ONLY REAL CHANGES YOU MAY HAVE TO MAKE IS KEY NUMBERS.
+ I used to use HID macros, but I wanted something smaller because I only needed MIDI for running tasks. So, I set out to write this. 
+ I'm sure this will work on any MIDI device; the only real changes you may need to make are the key numbers.
 
 # PLEASE LET ME KNOW IF IT HELPED YOU OUT. I'M CURIOUS IF THIS REACHES SOMEONE THAT NEEDS A TOOL LIKE THIS.
-# IF YOU MAKE IT .PY INSTEAD OF .PYW THE TERMINAL WINDOW WILL STAY ON THE SCREEN.
-# ALL IT DOES IT TELLS IT TO RUN WITHOUT SHOWING THE TERMINAL. WINDOWS ONLY THAT I AM AWARE OF.
+ If you change the extension to .py instead of .pyw, the terminal window will remain visible on the screen. 
+ The .pyw extension instructs the script to run without displaying the terminal window. This behavior is specific to Windows as far as I'm aware.
