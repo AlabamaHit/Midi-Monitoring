@@ -1,5 +1,5 @@
 # Midi-Monitoring
-This allows you to run anything inside built on python with your midi keyboard. It runs completely in the background and don't even show in the tray.
+This allows you to run anything with your midi keyboard built with python. It runs completely in the background and don't even show in the tray.
 
 #########
 # X button does "NOT" close the program. READ NEXT SECTION!!!
