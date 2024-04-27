@@ -11,9 +11,11 @@ Now open the keyboard.pyw and change the "self.device_name" to your midi name. M
 
 I have it on key 94 which for me is last black key to call the function to open the gui back. You can see in code.
 
-This can be any key you want, I just set it to that. On my keyboard the key numbers start 36 and goes up to 96 (working on tested below)
+This can be set to any key you want, I just set it to that. On my keyboard the key numbers start 36 and goes up to 96 (working on tested below)
 
-This makes it so you can close the program. Other wise, open task manager and end the task running in "Python". This will only happen if you don't close the program.
+# Closing the Program:
+Press the key you set above. The gui will come back up. Use the button Close Program, this will close it all the way out.
+NOTE: If you press X it will just make the gui go away, to close the program you Must use the "Close Program" button.
 
 That is it. Run the program you will see
 ![Screenshot 2024-04-26 204330](https://github.com/AlabamaHit/Midi-Monitoring/assets/79298983/f35a3138-3a83-45a7-9541-2ef2114f1921)
@@ -24,6 +26,20 @@ As noted above (Read it Please) press that key, you will see same window. To sto
 
 This will close everything out.
 
+Remember it runs 100% in the background, it will Not be in the system tray or taskbar. That is why you need to set that function to a key. I have it again, on 94 so in code 
+you can see how to get it to call and set it to any key you want. 
+
+# If you ever wonder if it's running? Click on the key you have for opening the gui back. If it does not open it's closed. You can verify in task manager if you want but not neccessary.
+
 # WORKING AND Tested on!
 
 I have tested it with my Yahama YPT-300. I used a MIDI to USB cable, to connect. The setting on my keyboard is "PC 2" in the functions on the keyboard. I am running Windows 10.
+
+# I HOPE THIS HELPS SOMEONE OUT. I LOOKED FOR SO LONG FOR A SAFE WAY TO MAKE MY MIDI DO THIS
+# I USED TO USE HID MACROS; BUT I WANTED SOMETHING SMALLER BECAUSE FOR JUST USING MIDI TO RUN
+# I DIDN'T REALLY NEED SO MUCH. SO I SET OUT TO WRITE THIS.
+# I'M SURE THIS WILL WORK ON ANY MIDI ONLY REAL CHANGES YOU MAY HAVE TO MAKE IS KEY NUMBERS.
+
+# PLEASE LET ME KNOW IF IT HELPED YOU OUT. I'M CURIOUS IF THIS REACHES SOMEONE THAT NEEDS A TOOL LIKE THIS.
+# IF YOU MAKE IT .PY INSTEAD OF .PYW THE TERMINAL WINDOW WILL STAY ON THE SCREEN.
+# ALL IT DOES IT TELLS IT TO RUN WITHOUT SHOWING THE TERMINAL. WINDOWS ONLY THAT I AM AWARE OF.
